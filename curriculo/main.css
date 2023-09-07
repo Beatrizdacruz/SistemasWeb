@@ -1,0 +1,76 @@
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.intro{width: 500px;}
+
+
+#aboutme{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+}
+.resumo{width: 450px;}
+
+.baras{
+    position: relative;
+}
+.progresso{
+    width: 500px;
+    height: 5px;
+    background: gray;
+}
+
+.progresso-75{
+    position: absolute;
+    top: 0;
+    width: 400px;
+    height: 5px;
+    background: rgb(211, 35, 35);
+}
+
+.progresso-100{
+    position: absolute;
+    top: 0;
+    width: 500px;
+    height: 5px;
+    background: rgb(211, 35, 35);
+}
+
+
+.progresso-50{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 5px;
+    background: rgb(211, 35, 35);
+}
+
+.progresso-25{
+    position: absolute;
+    top: 0;
+    width: 125px;
+    height: 5px;
+    background: rgb(211, 35, 35);
+}
+
+#escolaridade{
+    display: flex;
+    justify-content: center;
+}
+#profissional{
+    display: flex;
+    justify-content: center;
+}
+#projetos{
+    display: flex;
+    justify-content: center;
+}
+
+    #contato{
+        display: flex;
+        justify-content: center;
+    }
