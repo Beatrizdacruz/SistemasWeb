@@ -1,76 +1,151 @@
-#header{
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+/* Variáveis */
+:root {
+  --color-purple: rgb(177, 23, 190);
+  --color-blue: rgb(37, 40, 238);
+}
+
+/* Estilos Globais */
+
+section:nth-child(2n + 1) {
+  background: #fce8e8;
+  height: 100vh;
+}
+
+/* Estilos para a seção Header */
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+}
+
+.nome {
+  transform: translateY(-20px);
+  font-size: 50px;
+}
+
+.image-div {
+  position: relative;
+}
+
+.image {
+  position: relative;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+.intro {
+  width: 500px;
+  position: relative;
+}
+
+.barra-perfil {
+  position: absolute;
+  width: 400px;
+  height: 3px;
+  background: var(--color-purple);
+  top: 30px;
+}
+
+.icones{
+    margin-top: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
+    gap: 10px;
 }
-.intro{width: 500px;}
-
-
-#aboutme{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 100px;
+.icone{
+    width: 20px;
+    cursor:pointer;
 }
-.resumo{width: 450px;}
+/* Estilos para a seção "Sobre mim" */
 
-.baras{
-    position: relative;
-}
-.progresso{
-    width: 500px;
-    height: 5px;
-    background: gray;
+#aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
 }
 
-.progresso-75{
-    position: absolute;
-    top: 0;
-    width: 400px;
-    height: 5px;
-    background: rgb(211, 35, 35);
+.informacoes {
+  width: 450px;
 }
 
-.progresso-100{
-    position: absolute;
-    top: 0;
-    width: 500px;
-    height: 5px;
-    background: rgb(211, 35, 35);
+.objetivos{
+    margin-bottom: 100px;
 }
 
-
-.progresso-50{
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 5px;
-    background: rgb(211, 35, 35);
+.competencias{
+    margin-bottom: 100px;
 }
 
-.progresso-25{
-    position: absolute;
-    top: 0;
-    width: 125px;
-    height: 5px;
-    background: rgb(211, 35, 35);
+.baras {
+  position: relative;
+}
+.progresso {
+  width: 500px;
+  height: 5px;
+  background: gray;
 }
 
-#escolaridade{
-    display: flex;
-    justify-content: center;
-}
-#profissional{
-    display: flex;
-    justify-content: center;
-}
-#projetos{
-    display: flex;
-    justify-content: center;
+.progresso-75 {
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 5px;
+  background: var(--color-purple);
 }
 
-    #contato{
-        display: flex;
-        justify-content: center;
-    }
+.progresso-100 {
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: 5px;
+  background: var(--color-purple);
+}
+
+.progresso-50 {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 5px;
+  background: var(--color-purple);
+}
+
+.progresso-25 {
+  position: absolute;
+  top: 0;
+  width: 125px;
+  height: 5px;
+  background: var(--color-purple);
+}
+
+#escolaridade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#profissional {
+  display: flex;
+  justify-content: center;
+}
+#projetos {
+  display: flex;
+  justify-content: center;
+}
+
+#contato {
+  display: flex;
+  justify-content: center;
+}
