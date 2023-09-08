@@ -1,3 +1,9 @@
+/* Fonte */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
 /* Reset CSS */
 * {
   margin: 0;
@@ -140,6 +146,58 @@ section:nth-child(2n + 1) {
   display: flex;
   justify-content: center;
 }
+
+.experiencias{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinhar verticalmente no centro */
+  justify-content: center; /* Alinhar horizontalmente no centro */
+  height: 100vh; /* Define a altura da div para ocupar toda a altura da viewport, ajuste conforme necessário */
+}
+
+.experiencia-container {
+  display: flex;
+  flex-wrap: wrap; /* Quebra para a próxima linha se o espaço for insuficiente */
+  gap: 40px; /* Espaçamento entre os projetos */
+}
+
+.experiencia{
+  flex: 1; /* Os projetos ocupam espaço igualmente */
+}
+
+.atividades-projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinhar verticalmente no centro */
+  justify-content: center; /* Alinhar horizontalmente no centro */
+  height: 100vh; /* Define a altura da div para ocupar toda a altura da viewport, ajuste conforme necessário */
+}
+
+
+.projetos-container {
+  display: flex;
+  flex-wrap: wrap; /* Quebra para a próxima linha se o espaço for insuficiente */
+  gap: 40px; /* Espaçamento entre os projetos */
+}
+
+.projeto {
+  flex: 1; /* Os projetos ocupam espaço igualmente */
+}
+
+.atividadesExtras{
+  margin-top: 15px;
+  display: flex;
+  gap: 220px;
+  
+}
+.iconea{
+  width: 300px;
+  cursor:pointer;
+  position: relative;
+  border-radius: 100%;
+  z-index: 10;
+}
+
 #projetos {
   display: flex;
   justify-content: center;
