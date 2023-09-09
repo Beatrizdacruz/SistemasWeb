@@ -1,6 +1,7 @@
 /* Fonte */
 body {
   font-family: 'Montserrat', sans-serif;
+  color: #332929;
 }
 
 
@@ -162,26 +163,26 @@ section:nth-child(2n + 1) {
 }
 
 .experiencia{
-  flex: 1; /* Os projetos ocupam espaço igualmente */
+  flex: 1; 
 }
 
 .atividades-projetos {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinhar verticalmente no centro */
-  justify-content: center; /* Alinhar horizontalmente no centro */
-  height: 100vh; /* Define a altura da div para ocupar toda a altura da viewport, ajuste conforme necessário */
+  align-items: center;
+  justify-content: center; 
+  height: 100vh; 
 }
 
 
 .projetos-container {
   display: flex;
-  flex-wrap: wrap; /* Quebra para a próxima linha se o espaço for insuficiente */
-  gap: 40px; /* Espaçamento entre os projetos */
+  flex-wrap: wrap;
+  gap: 40px; 
 }
 
 .projeto {
-  flex: 1; /* Os projetos ocupam espaço igualmente */
+  flex: 1; 
 }
 
 .atividadesExtras{
@@ -206,4 +207,58 @@ section:nth-child(2n + 1) {
 #contato {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+
+/* Estilize o contêiner do formulário */
+.forms {
+  text-align: center; /* Centralize o conteúdo horizontalmente */
+  margin: 0 auto; /* Centralize o contêiner na página */
+  max-width: 400px; /* Defina a largura máxima do contêiner quadrado */
+  padding: 20px; /* Adicione um espaçamento interno para espaço entre os elementos e o contêiner */
+  border: 1px solid #ccc; /* Adicione uma borda ao contêiner */
+  border-radius: 10px; /* Adicione cantos arredondados ao contêiner */
+}
+
+/* Estilize as labels para que sejam exibidas em bloco */
+label {
+  display: block;
+  margin-bottom: 5px; /* Adicione um espaçamento entre as labels */
+}
+
+/* Estilize os inputs e textarea */
+input[type="text"],
+textarea {
+  width: 100%; 
+  border: 1px solid rgb(181, 158, 184);
+  padding: 10px;
+  margin-bottom: 10px; 
+}
+input[type="text"]:focus,
+textarea:focus {
+    border: 3px solid rgb(177, 23, 190);
+}
+
+/* Estilo para os botões "Enviar" e "Cancelar" */
+input[type="submit"],
+input[type="reset"] {
+    background-color: rgb(177, 23, 190); 
+    color: #fff; 
+    padding: 15px 20px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+input[type="submit"]:focus {
+    box-shadow: 0 0 5px rgb(177, 23, 190);
+}
+input[type="reset"]:focus {
+    box-shadow: 0 0 5px rgb(177, 23, 190);
+}
+
+
+
+
