@@ -114,9 +114,9 @@
 
     <section id="escolaridade">
       <div>
-        <h2>Formação Acadêmica</h2>
+        <h2>Formação Acadêmica e Áreas de Interesse</h2>
         <p>Universidade Federal da Bahia - Bacharelado Interdisciplinar em Ciência e Tecnologia</p>
-          <p>Data de Conclusão: Dezembro de 2023</p>
+          <p>Data de Conclusão: Dezembro de 2023.</p>
       </div>
     </section>
 
@@ -192,9 +192,27 @@
     
 
     <section id="contato">
-      <div>
+      <div class="forms">
         <h2>Contato</h2>
-      </div>
+        <form action="adefinir" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa">
+
+            <label for="assunto">Assunto do Contato:</label>
+            <input type="text" id="assunto" name="assunto" required>
+
+            <label for="mensagem">Mensagem(até 500 caracteres):</label>
+            <textarea id="mensagem" name="mensagem" maxlength="500" required></textarea>
+
+            <div class="botoes">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Cancelar">
+            </div>
+        </form>
+    </div>
     </section>
   </body>
 </html>
