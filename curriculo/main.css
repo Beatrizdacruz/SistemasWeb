@@ -143,7 +143,24 @@ section:nth-child(2n + 1) {
   justify-content: center;
   align-items: center;
 }
+
+.h2-escolaridade{
+  font-size: 30px;
+  transform: translateY(-20px);
+}
+
+.h2-interesse{
+  font-size: 30px;
+}
+
+.escolaridade-interrese{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
 #profissional {
+  padding: 0 20rem;
   display: flex;
   justify-content: center;
 }
@@ -151,19 +168,24 @@ section:nth-child(2n + 1) {
 .experiencias{
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinhar verticalmente no centro */
-  justify-content: center; /* Alinhar horizontalmente no centro */
-  height: 100vh; /* Define a altura da div para ocupar toda a altura da viewport, ajuste conforme necessário */
+  align-items: center; 
+  justify-content: center;
+  height: 100vh; 
 }
 
 .experiencia-container {
   display: flex;
-  flex-wrap: wrap; /* Quebra para a próxima linha se o espaço for insuficiente */
-  gap: 40px; /* Espaçamento entre os projetos */
+  flex-wrap: wrap; 
+  gap: 40px; 
 }
 
 .experiencia{
   flex: 1; 
+}
+
+.h2-experiencias{
+  transform: translateY(-70px);
+  font-size: 30px;
 }
 
 .atividades-projetos {
@@ -172,6 +194,11 @@ section:nth-child(2n + 1) {
   align-items: center;
   justify-content: center; 
   height: 100vh; 
+}
+
+.h2-atividades-projetos{
+  font-size: 30px;
+  transform: translateY(-70px);
 }
 
 
@@ -202,6 +229,7 @@ section:nth-child(2n + 1) {
 #projetos {
   display: flex;
   justify-content: center;
+  padding: 0 20rem ;
 }
 
 #contato {
@@ -214,12 +242,12 @@ section:nth-child(2n + 1) {
 
 /* Estilize o contêiner do formulário */
 .forms {
-  text-align: center; /* Centralize o conteúdo horizontalmente */
-  margin: 0 auto; /* Centralize o contêiner na página */
-  max-width: 400px; /* Defina a largura máxima do contêiner quadrado */
-  padding: 20px; /* Adicione um espaçamento interno para espaço entre os elementos e o contêiner */
-  border: 1px solid #ccc; /* Adicione uma borda ao contêiner */
-  border-radius: 10px; /* Adicione cantos arredondados ao contêiner */
+  text-align: center; 
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
 }
 
 /* Estilize as labels para que sejam exibidas em bloco */
