@@ -90,7 +90,7 @@ section:nth-child(2n + 1) {
 }
 
 .objetivos{
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .competencias{
@@ -240,7 +240,7 @@ section:nth-child(2n + 1) {
 }
 
 
-/* Estilize o contêiner do formulário */
+/* Estilizar o contêiner do formulário */
 .forms {
   text-align: center; 
   margin: 0 auto;
@@ -250,13 +250,12 @@ section:nth-child(2n + 1) {
   border-radius: 10px; 
 }
 
-/* Estilize as labels para que sejam exibidas em bloco */
 label {
   display: block;
-  margin-bottom: 5px; /* Adicione um espaçamento entre as labels */
+  margin-bottom: 5px;
 }
 
-/* Estilize os inputs e textarea */
+
 input[type="text"],
 textarea {
   width: 100%; 
@@ -286,7 +285,3 @@ input[type="submit"]:focus {
 input[type="reset"]:focus {
     box-shadow: 0 0 5px rgb(177, 23, 190);
 }
-
-
-
-
