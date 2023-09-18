@@ -1,0 +1,19 @@
+#mod{
+    width: 55px;
+}
+#equals{
+    background:rgb(7, 151, 31);
+}
+
+#clear{
+    background:rgb(197, 14, 14);
+}
+
+.botao{
+    width: 30px;
+    background: white;
+}
+
+#result{
+    height: 50px;
+}
