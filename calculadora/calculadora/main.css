@@ -1,19 +1,61 @@
-#mod{
-    width: 55px;
-}
-#equals{
-    background:rgb(7, 151, 31);
-}
-
-#clear{
-    background:rgb(197, 14, 14);
-}
-
-.botao{
-    width: 30px;
-    background: white;
-}
-
-#result{
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+  }
+  
+  .calculadora {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  table tr td button {
+    cursor: pointer;
+  }
+  
+  table {
+    background: #ffffff;
+    padding: 5px;
+  }
+  
+  td{
+      position: relative;
+  }
+  
+  #result {
     height: 50px;
-}
+    border: 2px #bbbbbb solid;
+    width: 230px;
+    padding-left: 10px;
+  }
+  
+  .botao {
+    width: 45px;
+    height: 35px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #bbbbbb;
+    
+  }
+  
+  #clear {
+    background: rgb(197, 14, 14);
+    color: white;
+  }
+  
+  #equals {
+    background: rgb(7, 151, 31);
+    bottom: 1px;
+    height: 70px;
+    position: absolute;
+    color: white;
+  }
