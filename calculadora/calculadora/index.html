@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -8,44 +7,50 @@
   </head>
   <body>
     <div class="calculadora">
-        <div class="display">
-            <input type="text" id="result" disabled>
-        </div>
-        <table class="buttons">
-            <tr>
-                <td><button class="botao" id="clear">C</button></td>
-                <td><button class="botao" id="parentesisD" >(</button></td>
-                <td><button class="botao" id="parentesisE">)</button></td>
-                <td><button class="botao" id="mod">mod</button></td>
-                
-            </tr>
-            <tr>
-                <td><button class="botao" id="7">7</button></td>
-                <td><button class="botao" id="8">8</button></td>
-                <td><button class="botao" id="9">9</button></td>
-                <td><button class="botao" id="divide">/</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao" id="4">4</button></td>
-                <td><button class="botao" id="5">5</button></td>
-                <td><button class="botao" id="6">6</button></td>
-                <td><button class="botao" id="multiply">x</button></td>
-            </tr>
-            <tr>
-                <td><button class="botao" id="1">1</button></td>
-                <td><button class="botao" id="2">2</button></td>
-                <td><button class="botao" id="3">3</button></td>
-                <td><button class="botao" id="subtract">-</button></td>
-            </tr>
-            <tr>
-                
-                <td><button class="botao" id="0">0</button></td>
-                <td><button class="botao" id="decimal">,</button></td>
-                <td><button class="botao" id="percent">%</button></td>
-                <td><button class="botao" id="add">+</button></td>
-                <td rowspan="1"><button class="botao" id="equals" style="height: 50px;">=</button></td>
-            </tr>
-        </table>
+      <div class="display">
+        <input type="text" id="result" disabled placeholder="0" readonly />
+      </div>
+      <table class="buttons">
+        <tr>
+          <td><button class="botao" id="clear" onclick="clear()">C</button></td>
+          <td><button class="botao" id="parentesisD">(</button></td>
+          <td><button class="botao" id="parentesisE">)</button></td>
+          <td><button class="botao" id="mod">mod</button></td>
+          <td><button class="botao" id="pi">π</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" id="7" onclick="addNumber('7')">7</button></td>
+          <td><button class="botao" id="8" onclick="addNumber('8')">8</button></td>
+          <td><button class="botao" id="9" onclick="addNumber('9')">9</button></td>
+          <td><button class="botao" id="divide" onclick="addOperator('/')">/</button></td>
+          <td><button class="botao" id="pi">√</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao" id="4" onclick="addNumber('4')">4</button></td>
+          <td><button class="botao" id="5" onclick="addNumber('5')">5</button></td>
+          <td><button class="botao" id="6" onclick="addNumber('6')">6</button></td>
+          <td><button class="botao" id="multiply" onclick="addOperator('*')">x</button></td>
+          <td>
+            <button class="botao" id="xsquared">x²</button>
+          </td>
+        </tr>
+        <tr>
+          <td><button class="botao" id="1" onclick="addNumber('1')">1</button></td>
+          <td><button class="botao" id="2" onclick="addNumber('2')">2</button></td>
+          <td><button class="botao" id="3" onclick="addNumber('3')">3</button></td>
+          <td><button class="botao" id="subtract" onclick="addOperator('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button class="botao final" id="0" onclick="addNumber('0')">0</button></td>
+          <td><button class="botao final" id="decimal">,</button></td>
+          <td><button class="botao final" id="percent">%</button></td>
+          <td><button class="botao final" id="add" onclick="addNumber('+')">+</button></td>
+          <td>
+            <button class="botao" id="equals" onclick="calculate()">=</button>
+          </td>
+        </tr>
+      </table>
     </div>
-    </body>
+    <script src="calculadora.js"></script>
+  </body>
 </html>
