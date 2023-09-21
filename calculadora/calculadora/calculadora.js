@@ -1,54 +1,90 @@
-let operador = '';
-let value1 = '';
-let value2 = '';
-let result = false;
+var resultado = document.getElementById('result');
 
-function addNumber(number) {
-    if (result) {
-        document.getElementById('result').value = number;
-        result = false;
+function addNumber(numero) {
+    if (resultado.value === '0' || resultado.value === 'Erro') {
+        resultado.value = numero;
     } else {
-        document.getElementById('result').value += number;
+        resultado.value += numero;
     }
 }
 
-function addOperator(operator) {
-
-    value1 = document.getElementById('result').value;
-    operador = operator;
-    document.getElementById('result').value = '';
-    
+function addOperator(operador) {
+    resultado.value += operador;
 }
 
 function calculate() {
-    if (value1 !== '' && value2 === '') {
-        value2 = document.getElementById('result').value;
+    let expressao = resultado.value;
+    let numeros = [];
+    let operadores = [];
+    let numeroAtual = '';
+
+
+    for (let i = 0; i < expressao.length; i++) {
+        let caractere = expressao.charAt(i);
+        if ('0123456789.'.includes(caractere)) {
+            numeroAtual += caractere;
+        } else {
+            if (numeroAtual !== '') {
+                numeros.push(parseFloat(numeroAtual));
+                numeroAtual = '';
+            }
+            if ('+-*/'.includes(caractere)) {
+                operadores.push(caractere);
+            }
+        }
     }
 
-    switch (operador) {
-        case '+':
-            document.getElementById('result').value = parseFloat(value1) + parseFloat(value2);
-            break;
-        case '-':
-            document.getElementById('result').value = parseFloat(value1) - parseFloat(value2);
-            break;
-        case 'x':
-            document.getElementById('result').value = parseFloat(value1) * parseFloat(value2);
-            break;
-        case '/':
-            document.getElementById('result').value = parseFloat(value1) / parseFloat(value2);
-            break;
+    if (numeroAtual !== '') {
+        numeros.push(parseFloat(numeroAtual));
     }
 
-    value1 = document.getElementById('result').value;
-    value2 = '';
-    result = true;
+
+    while (operadores.length > 0) {
+        let operador = operadores.shift();
+        let numero1 = numeros.shift();
+        let numero2 = numeros.shift();
+
+        switch (operador) {
+            case '*':
+                numeros.unshift(numero1 * numero2);
+                break;
+            case '/':
+                numeros.unshift(numero1 / numero2);
+                break;
+            case '+':
+                numeros.unshift(numero1 + numero2);
+                break;
+            case '-':
+                if (numero2 !== 0) {
+                    numeros.unshift(numero1 - numero2);
+                } else {
+                    resultado.value = 'Erro';
+                    return;
+                }
+                break;
+        }
+    }
+
+    if (numeros.length === 1) {
+        resultado.value = numeros[0];
+    } else {
+        resultado.value = 'Erro';
+    }
+
+
+    let historico = document.getElementById('historic');
+    historico.innerHTML += `<p>${expressao} = ${resultado.value}</p>`;
+
 }
 
-function clear() {
-    document.getElementById('result').value = '0';
-    value1 = '';
-    value2 = '';
-    operador = '';
-    result = false;
+function NotAvaliable(){
+    resultado.value = 'not available'
 }
+
+
+function clean() {
+    resultado.value = '0';
+}
+
+
+
