@@ -35,6 +35,17 @@
     width: 230px;
     padding-left: 10px;
   }
+
+  #historic {
+    min-height: 50px;
+    max-height: 300px;
+    border: 2px #948f8f solid;
+    background: rgb(197, 193, 193);
+    width: 230px;
+    padding-left: 10px;
+    overflow-y: auto;
+}
+
   
   .botao {
     width: 45px;
